@@ -1,0 +1,78 @@
+{%extends "base.html "%}   <!--extends is also a python function to extend whole html page-->
+
+{%block title %} Home{%endblock%}     <!-- Enter whatever you want to in your blocks of base page -->
+
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('views.home')}}" method="post">
+            <h2>Predictive analysis</h2>
+
+            <label for="Roll-no">UID</label><br>
+            <input type="text" id="Roll-no" name="Roll-no" ><br>
+                                                            
+            <label for="name">User Name</label><br>
+            <input type="text" id="name" name="name" ><br>
+
+            <label for="visited">No of Visited Resources</label><br>
+            <input type="number" id="visited" name="visited" ><br>
+            
+            <label for="raise">No of Raise hands</label><br>
+            <input type="number" id="raise" name="raise" ><br>
+            
+            <label for="announce">No of Announcements viewed:</label><br>
+            <input type="number" id="announce" name="announce" ><br>
+           
+            <label for="discuss">No of Discussions:</label><br>
+            <input type="number" id="discuss" name="discuss" ><br>
+           
+            <label for="absent">Student's Absent Days:</label>
+            <select id="absent" name="absent">
+            <option  value="Under-7">Under-7</option>
+            <option  value="Above-7">Above-7</option>
+            </select><br>
+     
+           
+
+            <label for="satisfy">Parent's School Satisfaction:</label>
+            <select id="satisfy" name="satisfy">
+            <option  value="Good">Good</option>
+            <option  value="Bad">Bad</option>
+            </select><br>
+            
+            <button type="sumit"> Submit </button>
+        </form>
+
+
+
+        
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+       
+    </style>
+</body>
+
+</html>
+
+{%endblock%}

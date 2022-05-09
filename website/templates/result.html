@@ -1,0 +1,22 @@
+{%extends "base.html "%}   <!--extends is also a python function to extend whole html page-->
+
+{%block title %} Home{%endblock%}     <!-- Enter whatever you want to in your blocks of base page -->
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> The average performance of student {{name}} with UID {{uid}} on bases of given details is {{value}}</h1>
+    <a href="/download">Download CSV  For Previous Records</a>
+    
+</body>
+
+</html>
+{%endblock%}
